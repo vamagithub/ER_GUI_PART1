@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <title>EasyReturns</title>
+        {% include 'head.html'%}         
+    </head>
+    <body>
+        
+        <div>
+            {% include 'header.html' %}  
+            
+
+            <section id="main" class="container 75%">
+                <div class="box">    
+                
+                    {% block body_base %}
+
+                    {% include "_messages.html" %}
+                    {% block body %}
+                    {% endblock %}
+
+                    {% endblock %}
+                    
+                </div>   
+            </section>
+            <footer>
+            {% include 'footer.html' %}
+            </footer>
+
+    </div>
+    </body>
+</html>        
